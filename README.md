@@ -6,7 +6,7 @@ Demonstrating how to link two channels in Go and pass a message
 
 **importToChannel** <br/>
 Takes a channel and a string message as arguments and passes the message into channel
-```go
+```Go
 func importToChannel(channelInput chan<- string, message string)  {
 	fmt.Println("Importing message to channel")
 	channelInput <- message
@@ -25,7 +25,7 @@ func passToChannel(channelInput <-chan string, channelOutput chan<-string)  {
 
 **exportFromChannel** <br/>
 Takes a channel as an arguments and returns a string (the message inside the channel)
-```
+```Go
 func exportFromChannel(channel <-chan string ) string {
 	fmt.Println("Exporting message from channel")
 	result := <- channel
